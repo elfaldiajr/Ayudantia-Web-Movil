@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Ayudantía 1</title>
+    <link rel="stylesheet" href="css/hawaii.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <header>
+        <div class="filtro-busqueda-container">
+            <i class="fas fa-search"></i>
+            <p>Filtros de búsqueda</p>
+        </div>
+        <div class="filtro-container">
+            <label>
+                Semestre:
+                <select class="option-ui" name="semestre">
+                    <option value="2025-2">2025-2</option>
+                    <option value="2025-2">2025-1</option>
+                </select>
+            </label>
+            <label>
+                Areas:
+                <select class="option-ui" name="Areas">
+                    <option value="todos">-- Todos --</option>
+                    <option value="Minors">Minors (MNOR)</option>
+                    <option value="Escuela de Ingeniería">Escuela de Ingeniería (ECIN)</option>
+                </select>
+            </label>
+            <label>
+                Carrera: 
+                <select class="option-ui" name="Carrera">
+                    <option value="todos">-- Todos --</option>
+                    <option value="INGENIERÍA CIVIL EN COMPUTACIÓN E INFORMÁTICA CQB">INGENIERÍA CIVIL EN COMPUTACIÓN E INFORMÁTICA CQB</option>
+                </select>
+            </label>
+            <label>
+                Nivel:
+                <select class="option-ui"  name="nivel">
+                    <option value="todos">-...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </label>
+            <label>
+                Día
+                <select class="option-ui" name="dia">
+                    <option value="todos">-- Todos --</option>
+                    <option value="lunes">Lunes</option>
+                </select>
+            </label>
+            <label>
+                Salas
+                <select class="option-ui" name="salas">
+                    <option value="todos">-- Todos --</option>
+                    <option value="CQB A-101">CQB A-101</option>
+                </select>
+            </label>
+            <label>
+                Profesores
+                <select class="option-ui" name="profesores">
+                    <option value="todos">-- Todos --</option>
+                    <option value="eric_ross">Eric Ross</option>
+                    <option value="veas">Veaas</option>
+                    <option value="ANTONIA ANTIQUERA DARRIGRANDI">ANTONIA ANTIQUERA DARRIGRANDI</option>
+                </select>
+            </label>
+            <label>
+                Cursos
+                <select class="option-ui" name="cursos">
+                    <option value="ninguno">-- Ninguno --</option>
+                    <option value="eric_ross">-- Todos --</option>
+                    <option value="veas">WEB</option>
+                    <option value="Academia de Programacion Competitiva (S/N) {T}">Academia de Programacion Competitiva (S/N) {T}</option>
+                </select>
+            </label>
+        </div>
+        <div class="filtro-container">
+            <div>
+                <button class="ui"><i class="fa-solid fa-rotate"></i></button>
+                <button class="ui"><i class="fa-solid fa-pencil"></i></button>
+                <button class="ui"><i class="fa-solid fa-print"></i></button>
+                <button class="ui"><i class="fa-solid fa-calendar-week"></i></button>
+            </div>
+            <label>
+                Zoom: 100% 
+                    <input class="slider" type="range" id="myRange" min="0" max="100" value="50">
+            </label>
+            <label class="filtro-rapido">
+                Filtro Rapido:
+                <div>
+                    <input type="text" id="myRange" min="0" max="100" value="50">
+                    <button class="ui"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </label>
+            <div class="login-container movil">
+                <div>
+                    <button class="ui">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Buzón</span>
+                    </button>
+                    <button class="ui">
+                        <i class="fa-solid fa-key"></i>
+                        <span>Google Login</span>
+                    </button>
+                </div>
+                Usuario:
+                <input type="text">
+                Contraseña
+                <input type="password">
+                <button class="ui"><i class="fa-solid fa-key"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <table id="horario">
+        <thead>
+            <tr>
+            <th style="width:1px;">BLOQUE</th>
+            <th class="columna" dia="Lunes">Lunes</th>
+            <th class="columna" dia="Martes">Martes</th>
+            <th class="columna" dia="Miercoles">Miercoles</th>
+            <th class="columna" dia="Jueves">Jueves</th>
+            <th class="columna" dia="Viernes">Viernes</th>
+            <th class="columna" dia="Sabado">Sabado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <th id="bloque-hora-A">
+                A <div class="bloque-horario">08:10 - 09:40</div>
+            </th>
+            <td class="bloque morning columna" id="Lunes-A" dia="Lunes" bloque="A"></td>
+            <td class="bloque morning columna" id="Martes-A" dia="Martes" bloque="A"></td>
+            <td class="bloque morning columna" id="Miercoles-A" dia="Miercoles" bloque="A"></td>
+            <td class="bloque morning columna" id="Jueves-A" dia="Jueves" bloque="A"></td>
+            <td class="bloque morning columna" id="Viernes-A" dia="Viernes" bloque="A"></td>
+            <td class="bloque morning columna" id="Sabado-A" dia="Sabado" bloque="A"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-B">
+                B <div class="bloque-horario">09:55 - 11:25</div>
+            </th>
+            <td class="bloque morning columna" id="Lunes-B" dia="Lunes" bloque="B"></td>
+            <td class="bloque morning columna" id="Martes-B" dia="Martes" bloque="B"></td>
+            <td class="bloque morning columna" id="Miercoles-B" dia="Miercoles" bloque="B"></td>
+            <td class="bloque morning columna" id="Jueves-B" dia="Jueves" bloque="B"></td>
+            <td class="bloque morning columna" id="Viernes-B" dia="Viernes" bloque="B"></td>
+            <td class="bloque morning columna" id="Sabado-B" dia="Sabado" bloque="B"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-C">
+                C <div class="bloque-horario">11:40 - 13:10</div>
+            </th>
+            <td class="bloque morning columna" id="Lunes-C" dia="Lunes" bloque="C"></td>
+            <td class="bloque morning columna" id="Martes-C" dia="Martes" bloque="C"></td>
+            <td class="bloque morning columna" id="Miercoles-C" dia="Miercoles" bloque="C"></td>
+            <td class="bloque morning columna" id="Jueves-C" dia="Jueves" bloque="C"></td>
+            <td class="bloque morning columna" id="Viernes-C" dia="Viernes" bloque="C"></td>
+            <td class="bloque morning columna" id="Sabado-C" dia="Sabado" bloque="C"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-C2">
+                C2 <div class="bloque-horario">13:10 - 14:30</div>
+            </th>
+            <td class="bloque lunch columna" id="Lunes-C2" dia="Lunes" bloque="C2"></td>
+            <td class="bloque lunch columna" id="Martes-C2" dia="Martes" bloque="C2"></td>
+            <td class="bloque lunch columna" id="Miercoles-C2" dia="Miercoles" bloque="C2"></td>
+            <td class="bloque lunch columna" id="Jueves-C2" dia="Jueves" bloque="C2"></td>
+            <td class="bloque lunch columna" id="Viernes-C2" dia="Viernes" bloque="C2"></td>
+            <td class="bloque lunch columna" id="Sabado-C2" dia="Sabado" bloque="C2"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-D">
+                D <div class="bloque-horario">14:30 - 16:00</div>
+            </th>
+            <td class="bloque afternoon columna" id="Lunes-D" dia="Lunes" bloque="D"></td>
+            <td class="bloque afternoon columna" id="Martes-D" dia="Martes" bloque="D"></td>
+            <td class="bloque afternoon columna" id="Miercoles-D" dia="Miercoles" bloque="D"></td>
+            <td class="bloque afternoon columna" id="Jueves-D" dia="Jueves" bloque="D"></td>
+            <td class="bloque afternoon columna" id="Viernes-D" dia="Viernes" bloque="D"></td>
+            <td class="bloque afternoon columna" id="Sabado-D" dia="Sabado" bloque="D"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-E">
+                E <div class="bloque-horario">16:15 - 17:45</div>
+            </th>
+            <td class="bloque afternoon columna" id="Lunes-E" dia="Lunes" bloque="E"></td>
+            <td class="bloque afternoon columna" id="Martes-E" dia="Martes" bloque="E"></td>
+            <td class="bloque afternoon columna" id="Miercoles-E" dia="Miercoles" bloque="E"></td>
+            <td class="bloque afternoon columna" id="Jueves-E" dia="Jueves" bloque="E"></td>
+            <td class="bloque afternoon columna" id="Viernes-E" dia="Viernes" bloque="E"></td>
+            <td class="bloque afternoon columna" id="Sabado-E" dia="Sabado" bloque="E"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-F">
+                F <div class="bloque-horario">18:00 - 19:30</div>
+            </th>
+            <td class="bloque afternoon columna" id="Lunes-F" dia="Lunes" bloque="F"></td>
+            <td class="bloque afternoon columna" id="Martes-F" dia="Martes" bloque="F"></td>
+            <td class="bloque afternoon columna" id="Miercoles-F" dia="Miercoles" bloque="F"></td>
+            <td class="bloque afternoon columna" id="Jueves-F" dia="Jueves" bloque="F"></td>
+            <td class="bloque afternoon columna" id="Viernes-F" dia="Viernes" bloque="F"></td>
+            <td class="bloque afternoon columna" id="Sabado-F" dia="Sabado" bloque="F"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-G">
+                G <div class="bloque-horario">19:45 - 21:15</div>
+            </th>
+            <td class="bloque afternoon columna" id="Lunes-G" dia="Lunes" bloque="G"></td>
+            <td class="bloque afternoon columna" id="Martes-G" dia="Martes" bloque="G"></td>
+            <td class="bloque afternoon columna" id="Miercoles-G" dia="Miercoles" bloque="G"></td>
+            <td class="bloque afternoon columna" id="Jueves-G" dia="Jueves" bloque="G"></td>
+            <td class="bloque afternoon columna" id="Viernes-G" dia="Viernes" bloque="G"></td>
+            <td class="bloque afternoon columna" id="Sabado-G" dia="Sabado" bloque="G"></td>
+            </tr>
+            <tr>
+            <th id="bloque-hora-H">
+                H <div class="bloque-horario">21:30 - 23:00</div>
+            </th>
+            <td class="bloque afternoon columna" id="Lunes-H" dia="Lunes" bloque="H"></td>
+            <td class="bloque afternoon columna" id="Martes-H" dia="Martes" bloque="H"></td>
+            <td class="bloque afternoon columna" id="Miercoles-H" dia="Miercoles" bloque="H"></td>
+            <td class="bloque afternoon columna" id="Jueves-H" dia="Jueves" bloque="H"></td>
+            <td class="bloque afternoon columna" id="Viernes-H" dia="Viernes" bloque="H"></td>
+            <td class="bloque afternoon columna" id="Sabado-H" dia="Sabado" bloque="H"></td>
+            </tr>
+        </tbody>
+        </table>
+    </main>
+    <footer>
+
+    </footer>
+</body>

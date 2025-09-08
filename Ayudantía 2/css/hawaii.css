@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif, 'Inter';
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 4px;
+    background: #EEEEEE;
+    font-size: 10pt;
+    border-width: 0px 0px 1px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+}
+
+header label {
+    padding: 2px 2px;
+    display: inline-block;
+}
+
+.filtro-busqueda-container {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10pt;
+    height: 25px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    border: 1px solid #77d5f7;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: #2E90BD;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.filtro-busqueda-container:hover {
+    background: #A1DAF2;
+}
+
+.filtro-busqueda-container p {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.filtro-container {
+    font-size: 11pt;
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 2px;
+    padding: 4px;
+}
+
+.filtro-rapido {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 0px 1rem;
+}
+
+.login-container {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 5px;
+}
+
+input {
+    padding: 1px 1px;
+}
+
+.option-ui {
+    width: 175px;
+    padding-left: 8px;
+    padding-right: 20px;
+    font-size: 11pt;
+    line-height: 28px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 1px 0px;
+    white-space: nowrap;   
+}
+
+
+.ui {
+    border: 1px solid #77d5f7;
+    background: #0078ae url(images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 9pt;
+    height: auto;
+    width: auto;
+    margin: 1px;
+    padding: 5px 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.ui:hover {
+    background: #A1DAF2;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+
+.slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border: 1px solid #77d5f7;
+  background: #fcfdfd url(images/ui-bg_inset-hard_100_fcfdfd_1x100.png) 50% bottom repeat-x;
+  border-radius: 5px 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px 5px;
+    border: 1px solid #77d5f7;
+    background: #0078ae url(images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x;
+    margin-top: -5px;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: #A1DAF2;
+}
+
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+table th {
+    background-color: #902f9b;
+    color: white;
+    border: 1px solid #872c91;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    unicode-bidi: isolate;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+table td {
+    border: 1px solid #ccc;
+    background-color: white;
+    vertical-align: top;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+}
+
+.morning {
+    background-color: #009fff;
+}
+
+.afternoon {
+    background-color: #ffe573;
+}
+.lunch {
+    background-color: #fdaf7b;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+table th {
+    background-color: #902f9b;
+    color: white;
+    border: 1px solid #872c91;
+}
+
+table#horario {
+    width: 99%;
+    border: 1px solid #fff;
+    border-spacing: 1px;
+    background-color: #111;
+    margin: 5px;
+    font-family: sans-serif;
+}
+
+
+#horario thead th:first-child {
+    width: 1% !important;
+}
+
+#horario thead th {
+    width: 17%;
+}
+
+.bloque-horario {
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+.columna {
+    font-size: 12pt;
+}
+
+@media (max-width: 1023px) {
+  header {
+    font-size: 9pt;
+  }
+
+  .option-ui {
+    width: 140px;
+    font-size: 10pt;
+  }
+
+  .filtro-container {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  table#horario {
+    font-size: 10pt;
+  }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px;
+    }
+
+    .filtro-busqueda-container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+
+    .slider {
+        width: 300px;
+    }
+
+    .filtro-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filtro-rapido {
+        align-items: start;
+        padding: 0%;
+    }
+
+    .filtro-rapido div {
+        width: 100%;
+    }
+
+    .movil {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .filtro-container label {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        width: 100%;    
+    }
+
+    .filtro-rapido div{
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+    }
+
+    .filtro-rapido input {
+        flex-grow: 1;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .option-ui {
+        flex-grow: 1;
+        width: 100%;
+        font-size: 9pt;
+    }
+
+    .login-container {
+        margin: 0;
+        text-align: start;
+    }
+
+    table#horario {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table#horario th,
+    table#horario td {
+        font-size: 9pt;
+        padding: 4px;
+    }
+
+    .bloque-horario {
+        font-size: 9pt;
+    }
+
+    #horario thead th,
+    #horario td {
+        min-width: 100px; 
+    }
+
+    .bloque {
+        overflow: auto;
+        height: 50px;
+        min-width: 100px; 
+    }
+}
