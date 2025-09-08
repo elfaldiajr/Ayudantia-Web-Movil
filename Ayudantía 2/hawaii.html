@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <div class="filtro-busqueda-container">
+        <div id="filtro-busqueda" class="filtro-busqueda-container">
             <i class="fas fa-search"></i>
             <p>Filtros de búsqueda</p>
         </div>
@@ -45,10 +45,8 @@
             </label>
             <label>
                 Nivel:
-                <select class="option-ui"  name="nivel">
+                <select id="nivel" class="option-ui" name="nivel">
                     <option value="todos">-...</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
                 </select>
             </label>
             <label>
@@ -237,7 +235,29 @@
         </tbody>
         </table>
     </main>
-    <footer>
-
-    </footer>
 </body>
+
+<script>
+    const select_nivel = document.getElementById('nivel')
+    const niveles = [1, 2, 3, 4, 5, 6, 7]
+
+    niveles.forEach((nivel) => {
+        const option = document.createElement("option")
+        option.innerText = nivel
+        select_nivel.appendChild(option)
+    })
+
+</script>
+
+<script>
+    document.getElementById('filtro-busqueda').addEventListener("click", () => {
+        const elements = document.getElementsByClassName('filtro-container')
+        Array.from(elements).forEach((element) => {
+            if(element.style.display == 'none') {
+                element.style.display = 'flex'
+            } else {
+                element.style.display = 'none'
+            }
+        })
+    })
+</script>
