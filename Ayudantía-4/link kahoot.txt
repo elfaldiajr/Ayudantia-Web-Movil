@@ -1,1 +1,4 @@
-https://create.kahoot.it/share/ayudantia-repaso-prueba-web/6b41e628-d5f3-4552-8738-6366fa0a2878
+8 6
+7
+draw 0 6 3 3
+draw 4 3 2 2
