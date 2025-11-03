@@ -103,7 +103,7 @@ java -version
 * Crea la carpeta `C:\Android`
 * Extrae ambos `.zip` y copia los archivos dentro de `C:\Android`.
 * Dentro de `cmdline-tools`, crea una carpeta llamada `latest` y pega los archivos ahí.
-* Crea una variable de entorno llamada `ANDROID_HOME` con valor `C:\Android`.
+* Crea una variable de entorno llamada `ANDROID_HOME` con `C:\Android`.
 * Agrega al PATH:
 
   ```
@@ -148,7 +148,11 @@ Android Platform (SDK):
 cordova platform add android@13.0.0
 ```
 
-* Verifica los requerimientos. Si falta una dependencia, revisa los pasos anteriores e instálala.
+* Verifica los requerimientos con:
+```bash
+cordova requirements
+````
+Si falta una dependencia, revisa los pasos anteriores e instálala.
 * Compila el proyecto con:
 
 ```bash
