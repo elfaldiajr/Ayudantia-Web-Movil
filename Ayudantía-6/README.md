@@ -170,7 +170,5 @@ Si todo sale bien, verás un mensaje similar a este:
 
 ## Notas:
 - Revisar `cordova requirements` y `cordova build android` por cmd, en vez de VS code.
-
-La APK podrás enviarlo por google drive y ver como funciona tu APK en tu celular.
-
-Referencia de la ayudantía: https://youtu.be/tyMwVqLNAQ8?si=fERdnY8gwhAy6Tfn
+- La APK podrás enviarlo por google drive y ver como funciona tu APK en tu celular.
+- Referencia de la ayudantía: https://youtu.be/tyMwVqLNAQ8?si=fERdnY8gwhAy6Tfn
