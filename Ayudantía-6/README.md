@@ -166,4 +166,4 @@ Si todo sale bien, verás un mensaje similar a este:
 
 La APK podrás enviarlo por google drive y ver como funciona tu APK en tu celular.
 
-Referencia de la tutoría: https://youtu.be/tyMwVqLNAQ8?si=fERdnY8gwhAy6Tfn
+Referencia de la ayudantía: https://youtu.be/tyMwVqLNAQ8?si=fERdnY8gwhAy6Tfn
