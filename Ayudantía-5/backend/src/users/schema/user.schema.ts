@@ -11,7 +11,7 @@ export class User {
     _id?: Types.ObjectId
 
 
-    @Prop({ required: true, trim: true, maxLength: 100 })
+    @Prop({ required: false, trim: true, maxLength: 100 })
     name: string
 
 
@@ -37,7 +37,6 @@ export class User {
 
 
 export type UserDocument = HydratedDocument<User>
-
 export const UserSchema = SchemaFactory.createForClass(User)
 
 
